@@ -1,0 +1,6 @@
+/* 可以只在 app.wxss中引入，那样就只需要引用一次 */
+@import '../template/test.wxss';
+
+.container{
+  text-align: center;
+}

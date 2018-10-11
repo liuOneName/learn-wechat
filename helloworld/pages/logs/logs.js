@@ -11,5 +11,22 @@ Page({
         return util.formatTime(new Date(log))
       })
     })
+  },
+  onPullDownRefresh: function(e){
+    console.log(e);
+  },
+  onPageScroll: function(e){
+    console.log(e);
+    wx.stopPullDownRefresh({
+      success: res => {
+        console.log(res);
+      },
+      fail: err => {
+        console.log(err);
+      },
+      complete: () => {
+        console.log('runned')
+      }
+    });
   }
 })

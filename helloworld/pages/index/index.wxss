@@ -22,3 +22,8 @@
 .msg{
   color: blue;
 }
+.clickMe{
+  background-color: #DD5145;
+  color: #fff;
+  line-height: 1.7;
+}

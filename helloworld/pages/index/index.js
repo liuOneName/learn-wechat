@@ -8,7 +8,7 @@ Page({
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
-    msg: 'Hello World',
+    msg: 'Hello',
   },
   //事件处理函数
   bindViewTap: function() {
@@ -17,8 +17,22 @@ Page({
     })
   },
   clickMe: function(){
-    this.setData({
-      msg: this.data.msg + '-爱你哟'
+    if(this.data.msg === 'Hello'){
+      this.setData({
+        msg: 'World'
+      })
+    } else{
+      this.setData({
+        msg: 'Hello',
+      })
+    }
+    // this.setData({
+    //   msg: this.data.msg + '-爱你哟'
+    // })
+  },
+  toTestPage: function(){
+    wx.navigateTo({
+      url: '../test/test'
     })
   },
   onLoad: function () {

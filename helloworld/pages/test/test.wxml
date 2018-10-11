@@ -1,0 +1,12 @@
+<!-- 引入需要的template -->
+<import src='../template/test.wxml' />
+
+<view class='container'>
+  <block>
+    <text class='msg'>{{msg}}</text>
+    <view>
+      <text>经度：{{position.latitude }}，纬度： {{position.longitude}}</text>
+    </view>
+  </block>
+  <template is='test' data="{{...test}}" />
+</view>
